@@ -11,6 +11,11 @@
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 *.log
+/Logs/
+/Packages/manifest.json
+/Packages/manifest.json.meta
+/Packages/packages-lock.json
+/Packages/packages-lock.json.meta
 
 # MemoryCaptures can get excessive in size.
 # They also could contain extremely sensitive data
