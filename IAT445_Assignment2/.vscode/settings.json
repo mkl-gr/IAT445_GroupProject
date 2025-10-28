@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "IAT445_Assignment2_Submit.sln"
+    "dotnet.defaultSolution": "IAT445_Assignment2.sln"
 }
