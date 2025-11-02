@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "IAT445_GroupProject.sln"
+    "dotnet.defaultSolution": "IAT445_GroupProject.sln",
+    "[csharp]": {
+        "editor.formatOnType": false
+    }
 }

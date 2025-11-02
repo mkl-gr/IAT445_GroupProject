@@ -12,8 +12,7 @@ public class TimerCanvas : MonoBehaviour
     [SerializeField] private TMP_Text _text;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
+    void Start() {
         _currentTime = _startMinutes * 60;
     }
 
@@ -32,7 +31,6 @@ public class TimerCanvas : MonoBehaviour
         TimeSpan time = TimeSpan.FromSeconds(_currentTime);
         _text.text = time.Minutes.ToString() + ":" + time.Seconds.ToString();
     }
-
     public void StartTimer()
     {
         _timerActive = true;
