@@ -1846,7 +1846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.03529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10203,7 +10203,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1525938348372565536, guid: 58c861720e1f0cb4ba8391df474baa86, type: 3}
       propertyPath: m_Mass
-      value: 1000
+      value: 1e+9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525938348372565536, guid: 58c861720e1f0cb4ba8391df474baa86, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 1073742007
       objectReference: {fileID: 0}
     - target: {fileID: 1630534112358062920, guid: 58c861720e1f0cb4ba8391df474baa86, type: 3}
       propertyPath: m_Enabled
@@ -14895,7 +14899,7 @@ GameObject:
   - component: {fileID: 1231950929}
   - component: {fileID: 1231950928}
   - component: {fileID: 1231950927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Terrain (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15426,9 +15430,9 @@ RectTransform:
   - {fileID: 783775438}
   m_Father: {fileID: 170001433}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 9.85, y: -6.6}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 35, y: 8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1284168854
@@ -20918,7 +20922,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -2, y: 0.45143998}
-  m_SizeDelta: {x: 19.7, y: 13.2}
+  m_SizeDelta: {x: 7, y: 4.76}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &2008561077 stripped
 Transform:
