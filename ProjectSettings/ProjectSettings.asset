@@ -144,11 +144,7 @@ PlayerSettings:
   preloadedAssets:
   - {fileID: 0}
   - {fileID: 11400000, guid: 4c7b88d4c66f2fd45b1b86bbaa579f66, type: 2}
-  - {fileID: 11400000, guid: 5dcc2603f77432c4b8f783205c89bc27, type: 2}
-  - {fileID: -6517218471499782410, guid: 1a4c68ca72a83449f938d669337cb305, type: 2}
-  - {fileID: 11400000, guid: 95a88d52ed1ab0b488a20749e2752340, type: 2}
-  - {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
-  - {fileID: 2707690468414890467, guid: a9a6963505ddf7f4d886008c6dc86122, type: 2}
+  - {fileID: 0}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -182,7 +178,7 @@ PlayerSettings:
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 32
-  AndroidTargetSdkVersion: 0
+  AndroidTargetSdkVersion: 32
   AndroidPreferredInstallLocation: 0
   aotOptions: 
   stripEngineCode: 1
@@ -930,8 +926,8 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: IAT445_Assignment1_VR
-  metroPackageVersion: 
+  metroPackageName: IAT445Assignment1VR
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -939,7 +935,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: IAT445_Assignment1_VR
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: IAT445_Assignment1_VR
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
@@ -987,7 +983,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -1009,11 +1011,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
-  cloudProjectId: bfe50c8b-1056-4437-b736-7b187eabbeb4
+  cloudProjectId: 19fb4d1d-20a7-43a5-8957-2c545fd8d2ce
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: IAT445_Assignment1_VR
-  organizationId: evil_hag
+  organizationId: mga116
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

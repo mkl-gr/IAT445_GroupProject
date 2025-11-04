@@ -46,15 +46,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4547849442272480390, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.76
+      value: -8.550604
       objectReference: {fileID: 0}
     - target: {fileID: 4547849442272480390, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.767
+      value: -1.6624135
       objectReference: {fileID: 0}
     - target: {fileID: 4547849442272480390, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.034
+      value: 1.7995137
       objectReference: {fileID: 0}
     - target: {fileID: 4547849442272480390, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -109,6 +109,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3771452789413926460, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1630534112358062920}
+    - targetCorrespondingSourceObject: {fileID: 3771452789413926460, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7157087172076968549}
+    - targetCorrespondingSourceObject: {fileID: 3771452789413926460, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6622174955755924766}
+    - targetCorrespondingSourceObject: {fileID: 2864207674201080559, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3269585826167993600}
   m_SourcePrefab: {fileID: 100100000, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
 --- !u!1 &5502099167841435840 stripped
 GameObject:
@@ -123,7 +132,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5502099167841435840}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 1e+9
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -134,7 +143,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1073742007
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -292,3 +301,48 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
+--- !u!114 &7157087172076968549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502099167841435840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59626c3c84da7e445bb7ab9725907d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomScale: 1
+--- !u!114 &6622174955755924766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5502099167841435840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c89ba75b7911e4e9311ba412f674e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1
+  objectName: Brown Mushroom
+--- !u!1 &6895631062218642451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2864207674201080559, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}
+  m_PrefabInstance: {fileID: 8650718200922969852}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3269585826167993600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6895631062218642451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59626c3c84da7e445bb7ab9725907d74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushroomScale: 1

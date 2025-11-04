@@ -1,8 +1,12 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Cauldron : MonoBehaviour
 {
     public GameObject player;
+    public List<int> contents;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,5 +27,9 @@ public class Cauldron : MonoBehaviour
             Destroy(other);
             player.GetComponent<ChangeHeight>().i += player.GetComponent<ChangeHeight>().growTimer;
         }
+    }
+
+    public void AddToCauldron(int id) {
+        contents.Add(id);
     }
 }
