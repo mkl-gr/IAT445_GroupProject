@@ -9,15 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 334086230510956019}
-  - component: {fileID: -3578527139578191836}
   - component: {fileID: 5015709912739130374}
   - component: {fileID: -6113084043197038955}
   - component: {fileID: 7762825914128877584}
   - component: {fileID: 9095752879390628762}
   - component: {fileID: -8616852888589601556}
   m_Layer: 0
-  m_Name: alien_plant_ed_03_URP
-  m_TagString: Untagged
+  m_Name: InteractiveWeed
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,27 +38,6 @@ Transform:
   - {fileID: 4899303110497695196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &-3578527139578191836
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146510271888766793}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.08
-  m_Center: {x: 0, y: 0.06, z: 0}
 --- !u!65 &5015709912739130374
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -79,8 +57,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16, y: 0.1, z: 0.12}
-  m_Center: {x: 0, y: 0.06, z: 0}
+  m_Size: {x: 0.22, y: -0.05, z: 0.26}
+  m_Center: {x: 0, y: 0.03, z: 0}
 --- !u!54 &-6113084043197038955
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -247,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PermittedDisplacementAxes: 5
+  m_PermittedDisplacementAxes: -1
   m_ConstrainedAxisDisplacementMode: 1
   m_TwoHandedRotationMode: 1
   m_AllowOneHandedScaling: 1

@@ -188,8 +188,8 @@ GameObject:
   - component: {fileID: -1625288220129204378}
   - component: {fileID: 7964008532119577440}
   m_Layer: 0
-  m_Name: alien_plant_ed_04_URP
-  m_TagString: Untagged
+  m_Name: InteractiveRagweed
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PermittedDisplacementAxes: 5
+  m_PermittedDisplacementAxes: -1
   m_ConstrainedAxisDisplacementMode: 1
   m_TwoHandedRotationMode: 1
   m_AllowOneHandedScaling: 1

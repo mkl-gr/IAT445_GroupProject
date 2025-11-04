@@ -16,8 +16,8 @@ GameObject:
   - component: {fileID: 3326727690807055434}
   - component: {fileID: 6628792755749936229}
   m_Layer: 0
-  m_Name: alien_plant_ed_02_URP
-  m_TagString: Untagged
+  m_Name: InteractiveBulb
+  m_TagString: Object
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -247,7 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_PermittedDisplacementAxes: 5
+  m_PermittedDisplacementAxes: -1
   m_ConstrainedAxisDisplacementMode: 1
   m_TwoHandedRotationMode: 1
   m_AllowOneHandedScaling: 1
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4
-  objectName: Glowing Tulip
+  objectName: Beautiful Bulb
 --- !u!1 &5458980656799685534
 GameObject:
   m_ObjectHideFlags: 0
