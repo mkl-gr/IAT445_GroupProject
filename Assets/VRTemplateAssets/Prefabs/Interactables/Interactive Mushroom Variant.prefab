@@ -357,6 +357,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   objectName: Brown Mushroom
+  cauldronAnimation: {fileID: 4915863843663251042, guid: 9ba5c59aab8437a4f9a41fca9b2c4634, type: 3}
+  cauldronTransform: {fileID: 0}
 --- !u!1 &6895631062218642451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2864207674201080559, guid: 589b0e358669b3d48a16ab26d6f3e8a8, type: 3}

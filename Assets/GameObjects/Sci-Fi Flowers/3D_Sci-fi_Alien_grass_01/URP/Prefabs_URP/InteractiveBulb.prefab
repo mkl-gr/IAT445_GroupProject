@@ -272,6 +272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   objectName: Beautiful Bulb
+  cauldronAnimation: {fileID: 2415447811048438670, guid: 8c28330643085194e9ee8987a0dc873d, type: 3}
+  cauldronTransform: {fileID: 0}
 --- !u!1 &5458980656799685534
 GameObject:
   m_ObjectHideFlags: 0

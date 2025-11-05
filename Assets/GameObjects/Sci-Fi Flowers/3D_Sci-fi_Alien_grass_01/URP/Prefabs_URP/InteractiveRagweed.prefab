@@ -444,3 +444,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 6
   objectName: Mystical Ragweed
+  cauldronAnimation: {fileID: 1693668491800532447, guid: 8e222acf3874f5f4caea5773dbc3c034, type: 3}
+  cauldronTransform: {fileID: 0}
