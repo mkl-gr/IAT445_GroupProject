@@ -16,6 +16,7 @@ public class ShrinkMushroom : MonoBehaviour
         {
             // Debug.Log("The Mushroom is interactable");
             gameObject.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = true;
+            gameObject.GetComponent<Rigidbody>().isKinematic = false;
         }
     }
 
