@@ -18,6 +18,7 @@ public class Cauldron : MonoBehaviour
     public class IntList
     {
         public List<int> nestedList;
+        public GameObject product;
     }
     public List<IntList> recipes = new List<IntList>();
 
@@ -62,7 +63,15 @@ public class Cauldron : MonoBehaviour
         } return false;
     }
 
-    public bool CheckListForRecipes() {
+    public void Cook(){
+        int i = CheckListForRecipes();
+        IntList relevantRecipe = recipes[i];
+        if (i != 99) {
+            GameObject theProduct = (GameObject)Instantiate(relevantRecipe.product, unloadingLocation.transform.position, unloadingLocation.transform.rotation);
+        }
+    }
+
+    public int CheckListForRecipes() {
         for (int i = 0; i < recipes.Count; i++) {
 
             // Checks if the amount of ingredients needed for the recipe is 
@@ -76,13 +85,13 @@ public class Cauldron : MonoBehaviour
 
                     if (matchingContents == contentids.Count) {
                         Debug.Log("Match found!");
-                        return true;
+                        return i;
                     }
                     
                 }
             }
         }
-        return false;
+        return 99;
     }
 
     public void UnloadContents() {
