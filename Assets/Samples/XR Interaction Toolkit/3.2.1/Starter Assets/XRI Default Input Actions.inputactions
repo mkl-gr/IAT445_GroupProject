@@ -1187,6 +1187,17 @@
                 },
                 {
                     "name": "",
+                    "id": "1fa50dd3-e815-4db8-a50a-24fe7c4c806f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "UI Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "71d94579-1bf4-4034-ab9e-e7166842128f",
                     "path": "<XRController>{LeftHand}/{Trigger}",
                     "interactions": "",
@@ -3016,6 +3027,17 @@
                     "name": "",
                     "id": "7bce785c-b72d-4f52-9607-4b0b96765e09",
                     "path": "<Keyboard>/#(T)",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "42d78c40-f91f-4ab3-bf54-8845a25246b0",
+                    "path": "<XRController>{RightHand}/{GripButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

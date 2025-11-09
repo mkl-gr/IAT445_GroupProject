@@ -124,10 +124,9 @@ GameObject:
   - component: {fileID: 224196995859084680}
   - component: {fileID: 1996709487170909947}
   - component: {fileID: 8182256155452822163}
-  - component: {fileID: 99819046567002269}
   m_Layer: 0
   m_Name: PP_Theme_06_Potion_002
-  m_TagString: Object
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -400,19 +399,3 @@ MonoBehaviour:
   m_MinimumScaleRatio: 0.25
   m_MaximumScaleRatio: 2
   m_ScaleMultiplier: 0.25
---- !u!114 &99819046567002269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3771452789413926460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5c89ba75b7911e4e9311ba412f674e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 2
-  objectName: Size-Changing Potion
-  cauldronAnimation: {fileID: 2415447811048438670, guid: 8c28330643085194e9ee8987a0dc873d, type: 3}
-  cauldronTransform: {fileID: 0}

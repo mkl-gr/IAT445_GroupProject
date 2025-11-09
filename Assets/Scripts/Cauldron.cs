@@ -34,7 +34,7 @@ public class Cauldron : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Great Potion"))
+        if (other.gameObject.name.Equals("PP_Theme_06_Potion_002(Clone)"))
         {
             Debug.Log("Great Potion Cauldron Effect Triggered");
             Destroy(other);

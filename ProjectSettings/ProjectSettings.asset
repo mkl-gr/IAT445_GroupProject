@@ -928,11 +928,11 @@ PlayerSettings:
   m_MobileRenderingPath: 1
   metroPackageName: IAT445Assignment1VR
   metroPackageVersion: 1.0.0.0
-  metroCertificatePath: 
+  metroCertificatePath: Assets/WSATestCertificate.pfx
   metroCertificatePassword: 
-  metroCertificateSubject: 
-  metroCertificateIssuer: 
-  metroCertificateNotAfter: 0000000000000000
+  metroCertificateSubject: DefaultCompany
+  metroCertificateIssuer: DefaultCompany
+  metroCertificateNotAfter: 8012507ee86ddd01
   metroApplicationDescription: IAT445_Assignment1_VR
   wsaImages: {}
   metroTileShortName: IAT445_Assignment1_VR
