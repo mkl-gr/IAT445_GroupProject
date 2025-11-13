@@ -20,7 +20,7 @@ public class CuttableBulb : MonoBehaviour
     private bool triggerRegrowth;
 
     private void OnTriggerEnter(Collider other) {
-        // If the object colliding with the mushroom's hitbox the function is called that makes the mushroom shrink.
+        // If the object colliding with the bulb's hitbox the function is called that makes the bulb break.
         if (other.CompareTag("Cutter") && regrowthTimer == 0){
             rootSystem.RetreatGroup(bID);
         }
