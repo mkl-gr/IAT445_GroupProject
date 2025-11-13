@@ -15,6 +15,11 @@ public class RootSystem : MonoBehaviour {
     public List<RootSystemStructure> rootsNBulbs = new List<RootSystemStructure>();
 
     void Start() {
+        for (int i = 0; i < rootsNBulbs.Count; i++) {
+            foreach (CuttableRoots cuttableRoot in rootsNBulbs[i].oppositeRootsList) {
+                cuttableRoot.Retreat();
+            }
+        }
     }        
 
     void Update() {

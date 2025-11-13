@@ -23,9 +23,13 @@ public class CuttableRoots : MonoBehaviour
 
     public void Retreat(){
         // Roots sink into the ground, causing the bridge they formed to be intraversible.
+        gameObject.GetComponent<BoxCollider>().enabled = false;
+        gameObject.GetComponent<MeshRenderer>().enabled = false;
     }
 
     public void Relink(){
         // Roots grow, forming a surface for the player to walk across.
+        gameObject.GetComponent<BoxCollider>().enabled = true;
+        gameObject.GetComponent<MeshRenderer>().enabled = true;
     }
 }

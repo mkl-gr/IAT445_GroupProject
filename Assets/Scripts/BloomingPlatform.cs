@@ -9,7 +9,7 @@ public class BloomingPlatform : MonoBehaviour
     float retreatTimer;
     
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Droplet") && retreatTimer == 0){
+        if (other.CompareTag("Projectile") && retreatTimer == 0){
             retreatTimer = retreatTimer + bloomPeriod;
         }
     }

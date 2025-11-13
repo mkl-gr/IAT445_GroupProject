@@ -21,7 +21,8 @@ public class CuttableBulb : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         // If the object colliding with the bulb's hitbox the function is called that makes the bulb break.
-        if (other.CompareTag("Cutter") && regrowthTimer == 0){
+        if (other.CompareTag("Projectile") && regrowthTimer == 0){
+            Debug.Log("Bulb collided with Projectile");
             rootSystem.RetreatGroup(bID);
         }
     }
@@ -41,6 +42,8 @@ public class CuttableBulb : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
+        if (regrowthTimer > 0) regrowthTimer--;
+        if (regrowthTimer == 1) triggerRegrowth = true;
         if (triggerRegrowth == true && regrowthTimer == 0) {
             rootSystem.RegrowGroup(bID);
         }
