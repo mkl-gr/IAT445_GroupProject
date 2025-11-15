@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     Vector3 velocity;
     float ySpeed;
 
+    [Header("Ground Check Settings")]
+    [SerializeField] float groundCheckRadius = 0.2f;
+    [SerializeField] Transform groundCheckOffset;
+    [SerializeField] LayerMask groundLayer;
+    bool isGrounded;
+
     void Start(){
         velocity = new Vector3(0,climbingSpeed,0);
     }
@@ -42,15 +48,29 @@ public class PlayerController : MonoBehaviour
 
         if (isClimbing) {
             gravityProvider.SetActive(false);
-            characterController.Move(velocity);
+            if (!isGrounded) characterController.Move(velocity);
         } else gravityProvider.SetActive(true);
+
+        GroundCheck();
+    }
+    
+    void Update(){
+        Debug.Log("isGrounded:" + isGrounded);
     }
 
     void OnDrawGizmosSelected() {
         if (climbDetectionTransform == null) return;
         Gizmos.DrawWireSphere(climbDetectionTransform.position, climbingReach);
+        Gizmos.DrawWireSphere(groundCheckOffset.position, groundCheckRadius);
     }
 
-    
+    void GroundCheck() {
+        // Returns true if player is grounded.
+        // More specifically it checks if the user is standing on an object
+        // that is on the Obstacle layer (The obstacle layer is chosen in
+        // the inspector)
+        isGrounded = Physics.CheckSphere(groundCheckOffset.position, groundCheckRadius, groundLayer);
+        
+    }
 
 }
