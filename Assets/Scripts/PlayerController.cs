@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit; // If using XR Interaction Toolkit
 using Unity.XR.CoreUtils;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 
 
 public class PlayerController : MonoBehaviour
@@ -9,10 +10,10 @@ public class PlayerController : MonoBehaviour
     public Transform playerHead;
     
     [SerializeField] CharacterController characterController;
-    bool isClimbing;
-    bool canClimb;
 
     [Header("Climbing Settings")]
+    bool isClimbing;
+    bool canClimb;
     [SerializeField] Vector3 climbDetectionVector;
     public Transform climbDetectionTransform;
     [SerializeField] float climbingSpeed = 1.5f;
@@ -28,6 +29,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Transform groundCheckOffset;
     [SerializeField] LayerMask groundLayer;
     bool isGrounded;
+    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Locomotion.Jump.JumpProvider theJumpProvider;
+    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Locomotion.Gravity.GravityProvider theGravityProvider;
 
     void Start(){
         velocity = new Vector3(0,climbingSpeed,0);
@@ -35,6 +38,10 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate() {
 
+        GroundCheck();
+    }
+    
+    void Update(){
         canClimb = false;
         Collider[] theClimbables = Physics.OverlapSphere(climbDetectionTransform.position, climbingReach, climbLayers);
         foreach(Collider climbable in theClimbables) {
@@ -51,11 +58,9 @@ public class PlayerController : MonoBehaviour
             if (!isGrounded) characterController.Move(velocity);
         } else gravityProvider.SetActive(true);
 
-        GroundCheck();
-    }
-    
-    void Update(){
         Debug.Log("isGrounded:" + isGrounded);
+        Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
+        Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
     }
 
     void OnDrawGizmosSelected() {
@@ -70,7 +75,7 @@ public class PlayerController : MonoBehaviour
         // that is on the Obstacle layer (The obstacle layer is chosen in
         // the inspector)
         isGrounded = Physics.CheckSphere(groundCheckOffset.position, groundCheckRadius, groundLayer);
-        
+
     }
 
 }

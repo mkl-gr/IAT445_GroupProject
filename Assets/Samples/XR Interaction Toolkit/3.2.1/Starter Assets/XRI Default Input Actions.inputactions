@@ -2474,7 +2474,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "01c7fda4-9c15-4167-8b87-58024f21d903",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -2551,6 +2551,17 @@
                     "name": "",
                     "id": "052b129b-fc83-4b33-a606-af10ad595c3e",
                     "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "921e17e4-95f1-4fb3-9393-f609047edec5",
+                    "path": "<Keyboard>/#(G)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
