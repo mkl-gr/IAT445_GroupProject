@@ -6,14 +6,14 @@ using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 
 public class PlayerController : MonoBehaviour
 {
-    [Header("General Stuff")]
     public XROrigin xrOrigin; // Or Transform if not using XROrigin component
     public Transform playerHead;
+    
     [SerializeField] CharacterController characterController;
-    bool isClimbing;
-    bool canClimb;
 
     [Header("Climbing Settings")]
+    bool isClimbing;
+    bool canClimb;
     [SerializeField] Vector3 climbDetectionVector;
     public Transform climbDetectionTransform;
     [SerializeField] float climbingSpeed = 1.5f;
@@ -58,9 +58,9 @@ public class PlayerController : MonoBehaviour
             if (!isGrounded) characterController.Move(velocity);
         } else gravityProvider.SetActive(true);
 
-        // Debug.Log("isGrounded:" + isGrounded);
-        // Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
-        // Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
+        Debug.Log("isGrounded:" + isGrounded);
+        Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
+        Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
     }
 
     void OnDrawGizmosSelected() {

@@ -28,16 +28,8 @@ public class ChangeHeight : MonoBehaviour
     {
         if (tallnessSlider != null)
         {
-            Debug.Log("Tallness changed.");
-            // CameraFloorOffset.transform.localScale = new Vector3(tallnessSlider.value, tallnessSlider.value, tallnessSlider.value);
-
-            // Change the player's height according to the value of the slider.
-            CameraFloorOffset.transform.position = new Vector3(0, tallnessSlider.value, 0);
-            // Adjust the player's field of view according to the value of the slider.
-
-            // Adjust the player's ground and climb checker
-
-            // Adjust the size of the player's collider.
+            // Debug.Log("Tallness changed.");
+            CameraFloorOffset.transform.localScale = new Vector3(tallnessSlider.value, tallnessSlider.value, tallnessSlider.value);
         }
         else Debug.Log("Slider is null.");
 

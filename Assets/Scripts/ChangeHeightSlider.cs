@@ -6,9 +6,11 @@ public class ChangeHeightSlider : MonoBehaviour
     public float minScale = 0.5f; // Minimum allowed scale
     public float maxScale = 2.0f; // Maximum allowed scale
 
-    void Update() {
+    void Update()
+    {
     }
 
-    void ScalePlayer(float amount) {
+    void ScalePlayer(float amount)
+    {
     }
 }

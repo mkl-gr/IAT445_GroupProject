@@ -890,7 +890,7 @@
                     "name": "Activate",
                     "type": "Button",
                     "id": "0c0991c5-d329-4afc-8892-1076b440477c",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -975,15 +975,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
-                },
-                {
-                    "name": "Shoot",
-                    "type": "Button",
-                    "id": "75c57d4e-e2d0-443a-826a-e7a09f6b0ceb",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -1187,17 +1178,6 @@
                 },
                 {
                     "name": "",
-                    "id": "1fa50dd3-e815-4db8-a50a-24fe7c4c806f",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "UI Press",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "71d94579-1bf4-4034-ab9e-e7166842128f",
                     "path": "<XRController>{LeftHand}/{Trigger}",
                     "interactions": "",
@@ -1303,17 +1283,6 @@
                     "processors": "ScaleVector2(x=0),StickDeadzone",
                     "groups": "",
                     "action": "Translate Manipulation",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "a2cfce29-9ccd-4b51-85df-60e42b1ae625",
-                    "path": "<XRController>/{TriggerButton}",
-                    "interactions": "Press",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -2474,7 +2443,7 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "01c7fda4-9c15-4167-8b87-58024f21d903",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -2551,17 +2520,6 @@
                     "name": "",
                     "id": "052b129b-fc83-4b33-a606-af10ad595c3e",
                     "path": "<XRController>{RightHand}/{PrimaryButton}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "921e17e4-95f1-4fb3-9393-f609047edec5",
-                    "path": "<Keyboard>/#(G)",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -3027,28 +2985,6 @@
                     "name": "",
                     "id": "198e6869-709e-448d-96d4-27186c9d56e6",
                     "path": "<Touchscreen>/Press",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "7bce785c-b72d-4f52-9607-4b0b96765e09",
-                    "path": "<Keyboard>/#(T)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Click",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "42d78c40-f91f-4ab3-bf54-8845a25246b0",
-                    "path": "<XRController>{RightHand}/{GripButton}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
