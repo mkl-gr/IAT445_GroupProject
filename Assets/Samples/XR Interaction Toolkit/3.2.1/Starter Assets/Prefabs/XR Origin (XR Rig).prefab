@@ -1025,6 +1025,7 @@ GameObject:
   - component: {fileID: 401080693702337005}
   - component: {fileID: 174564539288646248}
   - component: {fileID: 5753363179662712612}
+  - component: {fileID: 3455630722095187376}
   m_Layer: 2
   m_Name: XR Origin (XR Rig)
   m_TagString: Untagged
@@ -1064,7 +1065,7 @@ MonoBehaviour:
   m_Camera: {fileID: 1767192439}
   m_OriginBaseGameObject: {fileID: 1717954561962503725}
   m_CameraFloorOffsetObject: {fileID: 1680501586}
-  m_RequestedTrackingOriginMode: 1
+  m_RequestedTrackingOriginMode: 0
   m_CameraYOffset: 1.36144
 --- !u!143 &6232745470614056090
 CharacterController:
@@ -1084,7 +1085,7 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
+  m_Height: 1
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -1175,6 +1176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginBaseGameObject: {fileID: 1717954561962503725}
   CameraFloorOffset: {fileID: 1680501586}
+  climbChecker: {fileID: 0}
+  groundChecker: {fileID: 0}
+  thePlayerTransform: {fileID: 1300588928500926041}
   camera: {fileID: 1767192439}
   tallnessSlider: {fileID: 0}
   i: 0
@@ -1210,7 +1214,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 1680501587}
   mainCamera: {fileID: 1767192434}
   leftController: {fileID: 202364688}
-  speedOfProjectile: 500
+  speedOfProjectile: 10
   cooldown: 30
 --- !u!114 &174564539288646248
 MonoBehaviour:
@@ -1310,7 +1314,7 @@ MonoBehaviour:
   climbDetectionVector: {x: 0, y: 0, z: 0}
   climbDetectionTransform: {fileID: 1163890426213682770}
   climbingSpeed: 0.01
-  climbingReach: 1
+  climbingReach: 0.6
   gravityProvider: {fileID: 1316853283282549446}
   climbLayers:
     serializedVersion: 2
@@ -1323,6 +1327,33 @@ MonoBehaviour:
     m_Bits: 256
   theJumpProvider: {fileID: 7054646180837666701}
   theGravityProvider: {fileID: 658028464602686504}
+--- !u!54 &3455630722095187376
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717954561962503725}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1787516059220952802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1723,7 +1754,7 @@ Transform:
   m_GameObject: {fileID: 3764193159649436959}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.47, z: 0}
+  m_LocalPosition: {x: 0, y: -0.927, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1779,7 +1810,7 @@ MonoBehaviour:
   m_UnlimitedInAirJumps: 0
   m_InAirJumpCount: 1
   m_JumpForgivenessWindow: 0.25
-  m_JumpHeight: 1.25
+  m_JumpHeight: 1
   m_VariableHeightJump: 1
   m_MinJumpHoldTime: 0.1
   m_MaxJumpHoldTime: 0.5

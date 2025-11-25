@@ -16,7 +16,7 @@ public class SprayHose : MonoBehaviour
     [SerializeField] private Transform leftController;
 
     [Header("Settings")]
-    [SerializeField] private float speedOfProjectile = 150f;
+    [SerializeField] private float speedOfProjectile = 100f;
     [SerializeField] private float cooldown = 150;
     float i = 0;
     float timer = 0;

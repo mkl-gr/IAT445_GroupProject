@@ -58,15 +58,14 @@ public class PlayerController : MonoBehaviour
             if (!isGrounded) characterController.Move(velocity);
         } else gravityProvider.SetActive(true);
 
-        Debug.Log("isGrounded:" + isGrounded);
-        Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
-        Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
+        // Debug.Log("isGrounded:" + isGrounded);
+        // Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
+        // Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
     }
 
     void OnDrawGizmosSelected() {
-        if (climbDetectionTransform == null) return;
-        Gizmos.DrawWireSphere(climbDetectionTransform.position, climbingReach);
-        Gizmos.DrawWireSphere(groundCheckOffset.position, groundCheckRadius);
+        if (climbDetectionTransform != null) Gizmos.DrawWireSphere(climbDetectionTransform.position, climbingReach);
+        if (groundCheckOffset != null) Gizmos.DrawWireSphere(groundCheckOffset.position, groundCheckRadius);
     }
 
     void GroundCheck() {
@@ -74,8 +73,7 @@ public class PlayerController : MonoBehaviour
         // More specifically it checks if the user is standing on an object
         // that is on the Obstacle layer (The obstacle layer is chosen in
         // the inspector)
-        isGrounded = Physics.CheckSphere(groundCheckOffset.position, groundCheckRadius, groundLayer);
-
+        // if (groundCheckOffset != null) isGrounded = Physics.CheckSphere(groundCheckOffset.position, groundCheckRadius, groundLayer);
     }
 
 }

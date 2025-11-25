@@ -13,6 +13,7 @@ public class VRHose : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (OVRInput.Get(sprayInput)) {
+            Debug.Log("SHOOT!");
             theHose.StartSpray();
         }
     }
