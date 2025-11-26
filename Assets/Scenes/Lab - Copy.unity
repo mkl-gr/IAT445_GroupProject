@@ -11306,6 +11306,10 @@ PrefabInstance:
       propertyPath: m_GravityAccelerationModifier
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_RightGrabMoveProvider
+      value: 
+      objectReference: {fileID: 441087507}
     - target: {fileID: 1163890426213682770, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -11515,6 +11519,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 124815525}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+--- !u!114 &441087507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2032798983271290625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b94c4c83dec6a94fbaebf543478259e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447448696
 GameObject:
   m_ObjectHideFlags: 0

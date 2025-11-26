@@ -2241,6 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 1577856031}
   offset: {x: 0, y: 0, z: 0}
+  subtractY: 1.36144
 --- !u!1 &13324572
 GameObject:
   m_ObjectHideFlags: 0
@@ -19416,10 +19417,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7511558181221131132, guid: c3c55c404422e8a479b37c8daceaf277, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 3696173f1aabacc4abd376a5d0e87886, type: 2}
     - target: {fileID: -8679921383154817045, guid: b009fa006895d374092e90d917253005, type: 3}
       propertyPath: m_LocalScale.x
       value: 818.04346
@@ -19480,6 +19477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Well
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c3c55c404422e8a479b37c8daceaf277, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3696173f1aabacc4abd376a5d0e87886, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -66167,6 +66168,10 @@ PrefabInstance:
       propertyPath: m_GravityAccelerationModifier
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_RightGrabMoveProvider
+      value: 
+      objectReference: {fileID: 441087507}
     - target: {fileID: 1163890426213682770, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -66338,6 +66343,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 124815525}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+--- !u!114 &441087507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2032798983271290625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b94c4c83dec6a94fbaebf543478259e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &441114536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7280998886460103379, guid: e9ce9aaec542ef14bb2fdf3a66c7921a, type: 3}
@@ -184404,6 +184420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 13078452}
   offset: {x: 0, y: 0.68072, z: 0}
+  subtractY: 1.36144
 --- !u!1 &1308472654
 GameObject:
   m_ObjectHideFlags: 0
@@ -233555,6 +233572,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 13078452}
   offset: {x: 0, y: -0.877, z: 0}
+  subtractY: 1.36144
 --- !u!1 &1634582984
 GameObject:
   m_ObjectHideFlags: 0

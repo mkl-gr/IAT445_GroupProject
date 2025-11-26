@@ -171487,7 +171487,9 @@ PrefabInstance:
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 1349504526}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8762286023885395323, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
+    - {fileID: 5781730018482153907, guid: 9c489a8547f4d9e4387da15a4ff82c81, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -212781,7 +212783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mode: 1
-  size: {x: 916.6604, y: 139.87807, z: 1203.01}
+  size: {x: 916.6604, y: 139.87805, z: 1103.01}
   overrideRendererFilters: 0
   minRendererVolumeSize: 0.1
   objectLayerMask:
@@ -212821,7 +212823,7 @@ Transform:
   m_GameObject: {fileID: 1403497400}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -437.1748, y: 7.3455925, z: -69.74054}
+  m_LocalPosition: {x: -437.1748, y: 7.345585, z: -119.74054}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

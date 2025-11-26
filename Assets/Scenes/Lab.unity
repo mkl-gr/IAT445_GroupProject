@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 1577856031}
   offset: {x: 0, y: 0, z: 0}
+  subtractY: 1.36144
 --- !u!114 &19326645 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5875212748519880710, guid: e4bf1176028713c4285fbce71cf248f4, type: 3}
@@ -11451,6 +11452,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 13078452}
   offset: {x: 0, y: 0.68072, z: 0}
+  subtractY: 1.36144
 --- !u!4 &1317962991 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4535793208349402364, guid: a9290d7fda36be74fb042a5ce67f878d, type: 3}
@@ -12314,6 +12316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentToFollow: {fileID: 13078452}
   offset: {x: 0, y: -0.877, z: 0}
+  subtractY: 1.36144
 --- !u!1 &1650114337
 GameObject:
   m_ObjectHideFlags: 0

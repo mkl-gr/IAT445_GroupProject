@@ -9241,6 +9241,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 742272467831425975, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_RightGrabMoveProvider
+      value: 
+      objectReference: {fileID: 441087507}
     - target: {fileID: 1178791450436251564, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_RequestedTrackingOriginMode
       value: 0
@@ -9378,6 +9382,28 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1897117827}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+--- !u!114 &441087507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2032798983271290625, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b94c4c83dec6a94fbaebf543478259e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &441087508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 401080693702337005, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897117803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9becb5efe076d842a47386a78df0e12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &441114536 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7280998886460103379, guid: e9ce9aaec542ef14bb2fdf3a66c7921a, type: 3}
@@ -23003,10 +23029,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OriginBaseGameObject: {fileID: 1897117803}
   CameraFloorOffset: {fileID: 1928131529}
+  climbChecker: {fileID: 0}
+  groundChecker: {fileID: 0}
+  thePlayerTransform: {fileID: 0}
   camera: {fileID: 0}
   tallnessSlider: {fileID: 1658558206}
   i: 0
   growTimer: 300
+  enlargeInput: 0
+  shrinkInput: 0
 --- !u!114 &1897117818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23019,7 +23050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a27d9c50d1f3d1445a78fc087d09bee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theHose: {fileID: 1897117819}
+  theHose: {fileID: 441087508}
   sprayInput: 4
 --- !u!114 &1897117819
 MonoBehaviour:
@@ -23132,9 +23163,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44aec54c4eb6e1543b95305a2db9d582, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetTransform: {fileID: 0}
   xrOrigin: {fileID: 0}
   playerHead: {fileID: 0}
+  characterController: {fileID: 0}
+  climbDetectionVector: {x: 0, y: 0, z: 0}
+  climbDetectionTransform: {fileID: 0}
+  climbingSpeed: 1.5
+  climbingReach: 1.5
+  gravityProvider: {fileID: 0}
+  climbLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  climbInput: 0
+  groundCheckRadius: 0.2
+  groundCheckOffset: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  theJumpProvider: {fileID: 0}
+  theGravityProvider: {fileID: 0}
 --- !u!1001 &1901988445
 PrefabInstance:
   m_ObjectHideFlags: 0
