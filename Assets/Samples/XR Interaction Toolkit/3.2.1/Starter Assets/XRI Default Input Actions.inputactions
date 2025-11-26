@@ -1341,7 +1341,7 @@
                     "name": "Grab Move",
                     "type": "Button",
                     "id": "c5a6d766-d487-42ae-b293-da4749469e18",
-                    "expectedControlType": "",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -2529,8 +2529,8 @@
                 },
                 {
                     "name": "",
-                    "id": "a22e975c-f8f2-452e-b2fb-8bce40d91f28",
-                    "path": "<Keyboard>/#(B)",
+                    "id": "744e5f04-63e8-428f-81a2-e8872c3ad028",
+                    "path": "<Keyboard>/b",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

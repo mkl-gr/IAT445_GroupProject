@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlaySoundOnInteract : MonoBehaviour, IInteractable
+public class PlaySoundOnInteract : MonoBehaviour
 {
     [Header("Player Reference")]
     public CapsuleCollider playerCapsule;   // Assign your PLAYER here
