@@ -1183,8 +1183,8 @@ MonoBehaviour:
   tallnessSlider: {fileID: 0}
   i: 0
   growTimer: 300
-  enlargeInput: 8192
-  shrinkInput: 2097152
+  enlargeInput: 2097152
+  shrinkInput: 8192
   enlargeButton: {fileID: -8422096104760310295, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   shrinkButton: {fileID: 8416587257258069130, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &8180294194491665616

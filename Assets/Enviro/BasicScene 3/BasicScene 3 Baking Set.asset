@@ -39,7 +39,9 @@ MonoBehaviour:
   cellDescs:
     m_Keys: 
     m_Values: []
-  m_SerializedPerSceneCellList: []
+  m_SerializedPerSceneCellList:
+  - sceneGUID: c02f6d7120eb099418536b725b2d93f7
+    cellList: 
   cellSharedDataAsset:
     m_AssetGUID: 
     m_StreamableAssetPath: 
@@ -125,5 +127,5 @@ MonoBehaviour:
     - hasProbeVolume: 1
       bakeScene: 1
       bounds:
-        m_Center: {x: -445.5, y: 0, z: -121.5}
-        m_Extent: {x: 526.5, y: 81, z: 607.5}
+        m_Center: {x: -486, y: 40.5, z: -81}
+        m_Extent: {x: 486, y: 121.5, z: 648}

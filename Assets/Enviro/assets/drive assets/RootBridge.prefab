@@ -190,8 +190,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5543bbf8cbe3c614c9026f40040ab320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bridgeCollider: {fileID: 2886306728242973833}
-  CameraFloorOffset: {fileID: 0}
+  theXROrigin: {fileID: 0}
+  characterControl: {fileID: 0}
 --- !u!1001 &263927851808642586
 PrefabInstance:
   m_ObjectHideFlags: 0

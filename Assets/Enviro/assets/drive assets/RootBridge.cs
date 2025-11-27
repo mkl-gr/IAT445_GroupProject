@@ -13,9 +13,9 @@ public class RootBridge : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(characterControl.radius);
-        if (characterControl.radius >= 0.5) {
-            Debug.Log(true);
+        // Debug.Log(characterControl.radius);
+        if (characterControl.radius >= 0.3) {
+            // Debug.Log(true);
             gameObject.GetComponent<BoxCollider>().enabled = false;
         } else gameObject.GetComponent<BoxCollider>().enabled = true;
     }
