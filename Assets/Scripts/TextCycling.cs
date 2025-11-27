@@ -16,11 +16,10 @@ public class TextCycling : MonoBehaviour
     public float durationOfEachMessage = 3f;
 
     private int currentIndex = 0;
+    private Coroutine myRunningCoroutine;
 
-    void Start()
-    {
-        if (textObject == null)
-        {
+    void Start() {
+        if (textObject == null) {
             Debug.LogError("TextMeshProUGUI component not assigned!");
             enabled = false;
             return;
@@ -28,11 +27,11 @@ public class TextCycling : MonoBehaviour
     }
 
     public void textCycle(int cycleID) {
-        if (cycleID == 1) StartCoroutine(CycleTextTutorial());
-        if (cycleID == 2) StartCoroutine(CycleTextCave());
-        if (cycleID == 3) StartCoroutine(CycleTextLab());
-        if (cycleID == 4) StartCoroutine(CycleTextWasteland());
-        if (cycleID == 5) StartCoroutine(CycleTextFinalCutscene());
+        if (cycleID == 1) myRunningCoroutine = StartCoroutine(CycleTextTutorial());
+        if (cycleID == 2) myRunningCoroutine = StartCoroutine(CycleTextCave());
+        if (cycleID == 3) myRunningCoroutine = StartCoroutine(CycleTextLab());
+        if (cycleID == 4) myRunningCoroutine = StartCoroutine(CycleTextWasteland());
+        if (cycleID == 5) myRunningCoroutine = StartCoroutine(CycleTextFinalCutscene());
     }
 
     IEnumerator CycleTextTutorial()
@@ -41,6 +40,10 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsTutorial[currentIndex];
             currentIndex = (currentIndex + 1) % textsTutorial.Length;
+            if (currentIndex == textsTutorial.Length-1) {
+                textObject.text = "";
+                StopCoroutine(myRunningCoroutine);
+            }
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }
@@ -51,6 +54,7 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsCave[currentIndex];
             currentIndex = (currentIndex + 1) % textsCave.Length;
+            if (currentIndex == textsCave.Length) StopCoroutine(myRunningCoroutine);
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }
