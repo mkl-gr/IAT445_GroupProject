@@ -1183,6 +1183,10 @@ MonoBehaviour:
   tallnessSlider: {fileID: 0}
   i: 0
   growTimer: 300
+  enlargeInput: 8192
+  shrinkInput: 2097152
+  enlargeButton: {fileID: -8422096104760310295, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  shrinkButton: {fileID: 8416587257258069130, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!114 &8180294194491665616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1214,7 +1218,7 @@ MonoBehaviour:
   muzzleFlashPrefab: {fileID: 1680501587}
   mainCamera: {fileID: 1767192434}
   leftController: {fileID: 202364688}
-  speedOfProjectile: 10
+  speedOfProjectile: 40
   cooldown: 30
 --- !u!114 &174564539288646248
 MonoBehaviour:
@@ -1324,9 +1328,17 @@ MonoBehaviour:
   groundCheckOffset: {fileID: 5739546888585424994}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 257
   theJumpProvider: {fileID: 7054646180837666701}
   theGravityProvider: {fileID: 658028464602686504}
+  interactable: {fileID: 0}
+  hammer: {fileID: 0}
+  diamond: {fileID: 0}
+  stone: {fileID: 0}
+  cameraOffset: {fileID: 1680501587}
+  teleportProvider: {fileID: 0}
+  Button: {fileID: 0}
+  rightHand: {fileID: 8877177980677234388}
 --- !u!54 &3455630722095187376
 Rigidbody:
   m_ObjectHideFlags: 0

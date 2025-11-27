@@ -79,8 +79,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnDrawGizmosSelected() {
-        if (climbDetectionTransform != null) Gizmos.DrawWireSphere(climbDetectionTransform.position, climbingReach);
-        if (groundCheckOffset != null) Gizmos.DrawWireSphere(groundCheckOffset.position, groundCheckRadius);
+        // if (climbDetectionTransform != null) Gizmos.DrawWireSphere(climbDetectionTransform.position, climbingReach);
+        // if (groundCheckOffset != null) Gizmos.DrawWireSphere(groundCheckOffset.position, groundCheckRadius);
     }
 
     void GroundCheck() {

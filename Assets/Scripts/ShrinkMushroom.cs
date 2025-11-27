@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class ShrinkMushroom : MonoBehaviour
 {
+    public Rigidbody rb;
     public float mushroomScale = 1;
     void Start(){
         mushroomScale = transform.localScale.x;
         gameObject.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>().enabled = false;
+        gameObject.GetComponent<Rigidbody>().isKinematic = true;
     }
 
     // Update is called once per frame

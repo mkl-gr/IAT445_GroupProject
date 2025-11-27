@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class ChangeHeight : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class ChangeHeight : MonoBehaviour
     public float growTimer;
     public OVRInput.Button enlargeInput;
     public OVRInput.Button shrinkInput;
+    public InputActionReference enlargeButton;
+    public InputActionReference shrinkButton;
 
     void Start(){}
 
@@ -23,8 +26,15 @@ public class ChangeHeight : MonoBehaviour
     }
     void Update() {
         // if (!OVRInput.Get(shrinkInput) && !OVRInput.Get(shrinkInput)) Reverse();
+        Debug.Log("Camera floor offset: " + CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y);
         InstantEnlarge();
         InstantShrink();
+        if (CameraFloorOffset.transform.position.y > 0.01) {
+            gameObject.GetComponent<CharacterController>().radius = (float)0.5;
+        }
+        else if (CameraFloorOffset.transform.position.y < 0.01) {
+            gameObject.GetComponent<CharacterController>().radius = (float)0.05;
+        }
         if (i > 0)
         {
             i--;
@@ -74,8 +84,8 @@ public class ChangeHeight : MonoBehaviour
 
         if (OVRInput.Get(shrinkInput)) {
             //if (CameraFloorOffset.transform.position.y > 0) 
-            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y - 0.2), CameraFloorOffset.transform.position.z);
-            if (CameraFloorOffset.transform.position.y < 0.01) gameObject.GetComponent<CharacterController>().radius = (float)0.1;
+            if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) >= (float)-2) 
+            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y - 0.05), CameraFloorOffset.transform.position.z);
         }
         /** if (OVRInput.Get(shrinkInput)) {
             float scaleFactor = (float)0.0001;
@@ -91,8 +101,8 @@ public class ChangeHeight : MonoBehaviour
     public void InstantEnlarge()
     {
         if (OVRInput.Get(enlargeInput)) {
-            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y + 0.2), CameraFloorOffset.transform.position.z);
-            if (CameraFloorOffset.transform.position.y > 0.01) gameObject.GetComponent<CharacterController>().radius = (float)0.5;
+            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y + 0.05), CameraFloorOffset.transform.position.z);
+            
         }
         /* if (OVRInput.Get(enlargeInput)) {
             float scaleFactor = 5;
