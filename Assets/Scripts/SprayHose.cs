@@ -34,12 +34,12 @@ public class SprayHose : MonoBehaviour
             timer--;
         }
 
-        if (i <= 0)
+        /* if (i <= 0)
         {
             StartSpray();
             i += cooldown * 6;
         }
-        else i--;
+        else i--; */
         
     }
     

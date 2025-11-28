@@ -19,10 +19,13 @@ public class CuttableBulb : MonoBehaviour
     // 
     private bool triggerRegrowth;
 
+    [SerializeField] GameObject light;
+
     private void OnTriggerEnter(Collider other) {
         // If the object colliding with the bulb's hitbox the function is called that makes the bulb break.
         if (other.CompareTag("Projectile") && regrowthTimer == 0){
             Debug.Log("Bulb collided with Projectile");
+            if(light.GetComponent<Light>() != null) light.GetComponent<Light>().enabled = true;
             rootSystem.RetreatGroup(bID);
         }
     }
@@ -37,13 +40,16 @@ public class CuttableBulb : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        
+        if(light.GetComponent<Light>() != null) light.GetComponent<Light>().enabled = false;
     }
 
     // Update is called once per frame
     void Update() {
         if (regrowthTimer > 0) regrowthTimer--;
-        if (regrowthTimer == 1) triggerRegrowth = true;
+        if (regrowthTimer == 1) { 
+            triggerRegrowth = true;
+            if(light.GetComponent<Light>() != null) light.GetComponent<Light>().enabled = false;
+        }
         if (triggerRegrowth == true && regrowthTimer == 0) {
             rootSystem.RegrowGroup(bID);
         }
