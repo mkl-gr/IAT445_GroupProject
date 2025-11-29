@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 6463469297955106749}
   - component: {fileID: -6158490645055254948}
   - component: {fileID: 5097962349527435327}
-  m_Layer: 9
-  m_Name: FungiShrinker
+  m_Layer: 14
+  m_Name: GrowFungiShrinker
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -183,23 +183,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1492397577271802437, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1492397577603916660, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1492397577755101363, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1492397578118093335, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1492397578550410959, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6098213378169517917, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Name
@@ -207,7 +207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6098213378169517917, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 6911587736581598695, guid: 158e426725463794cae0a836b2491d0b, type: 3}
       propertyPath: m_LocalScale.x

@@ -8,6 +8,10 @@ public class SprayHose : MonoBehaviour
     [Header("Prefab References")]
     public GameObject dropletPrefab;
 
+    //added additional prefabs for the growing and shrinking projectiles
+    public GameObject growDropletPrefab;
+    public GameObject shrinkDropletPrefab;
+
     [Header("Prefab References")]
     // [SerializeField] private Animator hoseAnimator;
     [SerializeField] private Transform hoseHoleLocation;
@@ -43,6 +47,7 @@ public class SprayHose : MonoBehaviour
         
     }
     
+    //original code
     public void StartSpray()
     {
         if (timer <= 0) {
@@ -51,6 +56,27 @@ public class SprayHose : MonoBehaviour
         }
     }
 
+    //called from VRHose script
+    //checks to see what type of projectile should be shot: growing or shrinking, creates projectile based on type
+    public void StartSpray(string type)
+    {
+        if (timer <= 0)
+        {
+            if (type == "grow")
+            {
+                GrowSpray();
+            }
+
+            else
+            {
+                ShrinkSpray();
+            }
+
+                timer += cooldown;
+        }
+    }
+
+    //original code
     void Spray()
     {
         if (!dropletPrefab)
@@ -59,6 +85,30 @@ public class SprayHose : MonoBehaviour
         }
         
         Instantiate(dropletPrefab, hoseHoleLocation.position, hoseHoleLocation.rotation)
+            .GetComponent<Rigidbody>().AddForce(leftController.transform.forward * speedOfProjectile);
+    }
+
+    //uses prefab for growing projectile
+    void GrowSpray()
+    {
+        if (!growDropletPrefab)
+        {
+            return;
+        }
+
+        Instantiate(growDropletPrefab, hoseHoleLocation.position, hoseHoleLocation.rotation)
+            .GetComponent<Rigidbody>().AddForce(leftController.transform.forward * speedOfProjectile);
+    }
+
+    //uses prefab for shrinking projectile
+    void ShrinkSpray()
+    {
+        if (!shrinkDropletPrefab)
+        {
+            return;
+        }
+
+        Instantiate(shrinkDropletPrefab, hoseHoleLocation.position, hoseHoleLocation.rotation)
             .GetComponent<Rigidbody>().AddForce(leftController.transform.forward * speedOfProjectile);
     }
 }

@@ -24,7 +24,7 @@ public class Cauldron : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        
+        if (player == null) player = GameObject.Find("XR Origin (XR Rig)");
     }
 
     // Update is called once per frame

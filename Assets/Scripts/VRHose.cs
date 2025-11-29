@@ -12,9 +12,29 @@ public class VRHose : MonoBehaviour
 
     // Update is called once per frame
     void Update() {
-        if (OVRInput.Get(sprayInput)) {
+        //original script
+        if (OVRInput.Get(sprayInput))
+        {
             Debug.Log("SHOOT!");
             theHose.StartSpray();
+        }
+
+        //check if the shrink input was pressed
+        //makes it so that the shrink projectile is shot (called from SprayHose script)
+        //using keyboard for testing purposes, want to add an input for vr specifically
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            Debug.Log("SHOOT!");
+            theHose.StartSpray("shrink");
+        }
+
+        //check if the grow input was pressed
+        //makes it so that the grow projectile is shot (called from SprayHose script)
+        //using keyboard for testing purposes, want to add an input for vr specifically
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("SHOOT!");
+            theHose.StartSpray("grow");
         }
     }
     
