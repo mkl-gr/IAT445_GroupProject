@@ -2155,6 +2155,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   theHose: {fileID: 401080693702337005}
   sprayInput: 4
+  shrinkInput: 2
+  enlargeInput: 8
 --- !u!114 &401080693702337005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2168,6 +2170,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropletPrefab: {fileID: 7756580310743268997, guid: 2bfe6b820b1d2014caebfcc7a150558a, type: 3}
+  growDropletPrefab: {fileID: 0}
+  shrinkDropletPrefab: {fileID: 0}
   hoseHoleLocation: {fileID: 4879525082532858477}
   muzzleFlashPrefab: {fileID: 1680501587}
   mainCamera: {fileID: 1767192434}
@@ -2293,6 +2297,10 @@ MonoBehaviour:
   teleportProvider: {fileID: 0}
   Button: {fileID: 0}
   rightHand: {fileID: 8877177980677234388}
+  hasSyringe: 0
+  hasBeaker: 0
+  hasCure: 0
+  hasRoot: 0
 --- !u!54 &3455630722095187376
 Rigidbody:
   m_ObjectHideFlags: 0

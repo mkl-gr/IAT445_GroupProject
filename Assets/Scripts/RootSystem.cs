@@ -34,6 +34,7 @@ public class RootSystem : MonoBehaviour {
                 foreach (CuttableRoots oppRoot in rootsNBulbs[i].oppositeRootsList) {
                     oppRoot.Retreat();
                 }
+                if(rootsNBulbs[i].bulb.GetComponent<SphereCollider>() != null) rootsNBulbs[i].bulb.GetComponent<SphereCollider>().enabled = true;
                 return;
             }
         }
@@ -49,6 +50,7 @@ public class RootSystem : MonoBehaviour {
                 foreach (CuttableRoots oppRoot in rootsNBulbs[i].oppositeRootsList) {
                     oppRoot.Relink();
                 }
+                if(rootsNBulbs[i].bulb.GetComponent<SphereCollider>() != null) rootsNBulbs[i].bulb.GetComponent<SphereCollider>().enabled = false;
                 return;
             }
         }

@@ -45,15 +45,27 @@ public class PlayerController : MonoBehaviour
     private int mode = 0;
     public InputActionReference Button;
     public NearFarInteractor rightHand;
+    public int hasSyringe = 0;
+    public int hasBeaker = 0;
+    public int hasCure = 0;
+    public int hasRoot = 0;
 
     void Start(){
         velocity = new Vector3(0,climbingSpeed,0);
         rightHand.selectEntered.AddListener(SelectStone);
+
+        SaveDataClass myInstance = new SaveDataClass();
+        // myInstance.LoadData();
+        hasSyringe = PlayerPrefs.GetInt("Syringe");
+        hasBeaker = PlayerPrefs.GetInt("Beaker");
+        hasRoot = PlayerPrefs.GetInt("Root");
+        hasCure = PlayerPrefs.GetInt("Cure");
+        Debug.Log("Has syringe: " + hasSyringe + ", Has beaker: " + hasBeaker + ", Has root: " + hasRoot);
     }
 
     private void FixedUpdate() {
 
-        GroundCheck();
+        // GroundCheck();
     }
     
     void Update(){
@@ -143,12 +155,18 @@ public class PlayerController : MonoBehaviour
         }
     } */
 
-    public void ShowHammer() {
-        hammer.SetActive(true);
+    /* public void GetSyringe() {
+        if (hasSyringe == 0) {
+            hasSyringe = 1;
+            Destroy(gameObject);
+        }
     }
 
-    public void HideHammer() {
-        hammer.SetActive(false); diamond.SetActive(false);
-    }
+    public void GetBeaker() {
+        if (hasBeaker == 0) {
+            hasBeaker = 1;
+            Destroy(gameObject);
+        }
+    } */
 
 }

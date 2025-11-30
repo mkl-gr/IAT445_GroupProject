@@ -42,6 +42,7 @@ public class TextCycling : MonoBehaviour
             currentIndex = (currentIndex + 1) % textsTutorial.Length;
             if (currentIndex == textsTutorial.Length-1) {
                 textObject.text = "";
+                currentIndex = 0;
                 StopCoroutine(myRunningCoroutine);
             }
             yield return new WaitForSeconds(durationOfEachMessage);
@@ -54,7 +55,11 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsCave[currentIndex];
             currentIndex = (currentIndex + 1) % textsCave.Length;
-            if (currentIndex == textsCave.Length) StopCoroutine(myRunningCoroutine);
+            if (currentIndex == textsCave.Length-1) {
+                textObject.text = "";
+                currentIndex = 0;
+                StopCoroutine(myRunningCoroutine);
+            }
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }
@@ -65,6 +70,11 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsLab[currentIndex];
             currentIndex = (currentIndex + 1) % textsLab.Length;
+            if (currentIndex == textsLab.Length-1) { 
+                textObject.text = "";
+                currentIndex = 0;
+                StopCoroutine(myRunningCoroutine);
+            }
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }
@@ -75,6 +85,11 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsWasteland[currentIndex];
             currentIndex = (currentIndex + 1) % textsWasteland.Length;
+            if (currentIndex == textsWasteland.Length-1) {
+                textObject.text = "";
+                currentIndex = 0;
+                StopCoroutine(myRunningCoroutine);
+            }
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }
@@ -85,6 +100,11 @@ public class TextCycling : MonoBehaviour
         {
             textObject.text = textsFinalCutscene[currentIndex];
             currentIndex = (currentIndex + 1) % textsFinalCutscene.Length;
+            if (currentIndex == textsFinalCutscene.Length-1) { 
+                textObject.text = "";
+                currentIndex = 0;
+                StopCoroutine(myRunningCoroutine);
+            }
             yield return new WaitForSeconds(durationOfEachMessage);
         }
     }

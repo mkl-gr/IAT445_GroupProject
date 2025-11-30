@@ -19,6 +19,7 @@ public class ChangeHeight : MonoBehaviour
     public InputActionReference shrinkButton;
 
     void Start(){
+        CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)1.36144, CameraFloorOffset.transform.position.z);
     }
 
     void Awake()
@@ -26,14 +27,22 @@ public class ChangeHeight : MonoBehaviour
         // tallnessSlider = GetComponent<Slider>();
     }
     void Update() {
-        Debug.Log("Camera floor offset: " + CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y);
+        // Debug.Log("Camera floor offset: " + CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y);
         InstantEnlarge();
         InstantShrink();
-        if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) >= (float)-0.2) {
+        // if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) >= (float)-0.2) {
+        if (gameObject.GetComponent<CharacterController>().height > 1) {
             gameObject.GetComponent<CharacterController>().radius = (float)0.3;
+            /* CameraFloorOffset.transform.localScale = new Vector3((float)(0.5), 
+                                                                     (float)(0.5), 
+                                                                     (float)(0.5)); */
         }
-        else if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) <= (float)-0.2) {
+        // else if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) <= (float)-0.2) {
+        else if (gameObject.GetComponent<CharacterController>().height < 1) {
             gameObject.GetComponent<CharacterController>().radius = (float)0.05;
+            /* CameraFloorOffset.transform.localScale = new Vector3((float)(1), 
+                                                                     (float)(1), 
+                                                                     (float)(1)); */
         }
         /* if (i > 0)
         {
@@ -44,58 +53,38 @@ public class ChangeHeight : MonoBehaviour
     
     public void ChangePlayerHeight()
     {
-        /* if (tallnessSlider != null)
-        {
-            // Debug.Log("Tallness changed.");
-            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, tallnessSlider.value, CameraFloorOffset.transform.position.z);
-            gameObject.GetComponent<CharacterController>().height = tallnessSlider.value*4;
-            gameObject.GetComponent<CharacterController>().center = new Vector3(gameObject.GetComponent<CharacterController>().center.x, tallnessSlider.value*4, gameObject.GetComponent<CharacterController>().center.y);
-            
-            thePlayerTransform.GetComponent<FollowParent>().offset = new Vector3(0, -gameObject.GetComponent<CharacterController>().height/4, 0);
-            float i = gameObject.GetComponent<CharacterController>().height*2;
-            Debug.Log("CharacterController Center: " + gameObject.GetComponent<CharacterController>().center + "Height: " + gameObject.GetComponent<CharacterController>().height + ", The offset:" + thePlayerTransform.GetComponent<FollowParent>().offset);
-            Debug.Log("PlayerTransformY: " + thePlayerTransform.transform.position.y + " PlayerLocalTransformY: " + thePlayerTransform.transform.localPosition.y);
-            // CameraFloorOffset.transform.localScale = new Vector3(tallnessSlider.value, tallnessSlider.value, tallnessSlider.value);
-        }
-        else Debug.Log("Slider is null."); */
+        
 
     }
 
     public void InstantShrink()
     {
 
-        if (OVRInput.Get(shrinkInput)) {
-            //if (CameraFloorOffset.transform.position.y > 0) 
-            if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) >= (float)-2) 
+        if (OVRInput.Get(shrinkInput) || Input.GetKey(KeyCode.N)) {
+            if (gameObject.GetComponent<CharacterController>().height > 0.5) {
                 CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y - 0.025), CameraFloorOffset.transform.position.z);
-            if ((CameraFloorOffset.transform.position.y + CameraFloorOffset.transform.localPosition.y) >= (float)-1) 
+                /* CameraFloorOffset.transform.localScale = new Vector3((float)(CameraFloorOffset.transform.localScale.x - 0.025), 
+                                                                     (float)(CameraFloorOffset.transform.localScale.y - 0.025), 
+                                                                     (float)(CameraFloorOffset.transform.localScale.z - 0.025)); */
+            }
+            if (gameObject.GetComponent<CharacterController>().height > 1) {
                 CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y - 0.025), CameraFloorOffset.transform.position.z);
+                /* CameraFloorOffset.transform.localScale = new Vector3((float)(CameraFloorOffset.transform.localScale.x - 0.025), 
+                                                                     (float)(CameraFloorOffset.transform.localScale.y - 0.025), 
+                                                                     (float)(CameraFloorOffset.transform.localScale.z - 0.025)); */
+            }
         }
-        /** if (OVRInput.Get(shrinkInput)) {
-            float scaleFactor = (float)0.0001;
-            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, scaleFactor, CameraFloorOffset.transform.position.z);
-            gameObject.GetComponent<CharacterController>().height = scaleFactor*4;
-            gameObject.GetComponent<CharacterController>().radius = (float)0.5;
-            gameObject.GetComponent<CharacterController>().center = new Vector3(gameObject.GetComponent<CharacterController>().center.x, scaleFactor*4, gameObject.GetComponent<CharacterController>().center.y);
-            thePlayerTransform.GetComponent<FollowParent>().offset = new Vector3(0, -gameObject.GetComponent<CharacterController>().height/4, 0);
-        } */
 
     }
 
     public void InstantEnlarge()
     {
-        if (OVRInput.Get(enlargeInput)) {
+        if (OVRInput.Get(enlargeInput) || Input.GetKey(KeyCode.M)) {
             CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, (float)(CameraFloorOffset.transform.position.y + 0.05), CameraFloorOffset.transform.position.z);
-            
+            /* CameraFloorOffset.transform.localScale = new Vector3((float)(CameraFloorOffset.transform.localScale.x + 0.05), 
+                                                                 (float)(CameraFloorOffset.transform.localScale.y + 0.05), 
+                                                                 (float)(CameraFloorOffset.transform.localScale.z + 0.05)); */
         }
-        /* if (OVRInput.Get(enlargeInput)) {
-            float scaleFactor = 5;
-            CameraFloorOffset.transform.position = new Vector3(CameraFloorOffset.transform.position.x, scaleFactor, CameraFloorOffset.transform.position.z);
-            gameObject.GetComponent<CharacterController>().height = scaleFactor*4;
-            gameObject.GetComponent<CharacterController>().radius = (float)0.5;
-            gameObject.GetComponent<CharacterController>().center = new Vector3(gameObject.GetComponent<CharacterController>().center.x, scaleFactor*4, gameObject.GetComponent<CharacterController>().center.y);
-            thePlayerTransform.GetComponent<FollowParent>().offset = new Vector3(0, -gameObject.GetComponent<CharacterController>().height/4, 0);
-        } */
 
     }
     
