@@ -26,12 +26,29 @@ public class TextCycling : MonoBehaviour
         }
     }
 
+    void Update() {
+        if (Input.GetKey(KeyCode.P)) {
+            textObject.text = "";
+            currentIndex = 0;
+            StopCoroutine(myRunningCoroutine);
+        }
+    }
+
     public void textCycle(int cycleID) {
         if (cycleID == 1) myRunningCoroutine = StartCoroutine(CycleTextTutorial());
         if (cycleID == 2) myRunningCoroutine = StartCoroutine(CycleTextCave());
         if (cycleID == 3) myRunningCoroutine = StartCoroutine(CycleTextLab());
         if (cycleID == 4) myRunningCoroutine = StartCoroutine(CycleTextWasteland());
         if (cycleID == 5) myRunningCoroutine = StartCoroutine(CycleTextFinalCutscene());
+    }
+
+    public void textCycleThenDestroy(int cycleID) {
+        if (cycleID == 1) myRunningCoroutine = StartCoroutine(CycleTextTutorial());
+        if (cycleID == 2) myRunningCoroutine = StartCoroutine(CycleTextCave());
+        if (cycleID == 3) myRunningCoroutine = StartCoroutine(CycleTextLab());
+        if (cycleID == 4) myRunningCoroutine = StartCoroutine(CycleTextWasteland());
+        if (cycleID == 5) myRunningCoroutine = StartCoroutine(CycleTextFinalCutscene());
+        Destroy(gameObject);
     }
 
     IEnumerator CycleTextTutorial()

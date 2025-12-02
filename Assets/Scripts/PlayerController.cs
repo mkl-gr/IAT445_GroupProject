@@ -85,6 +85,11 @@ public class PlayerController : MonoBehaviour
             if (!isGrounded) characterController.Move(velocity);
         } else gravityProvider.SetActive(true);
 
+        if (Input.GetKey(KeyCode.P)) {
+            Debug.Log("Data deleted");
+            PlayerPrefs.DeleteAll();
+        }
+
         // Debug.Log("isGrounded:" + isGrounded);
         // Debug.Log("CharacterController's isGrounded:" + characterController.isGrounded);
         // Debug.Log("Gravity Provider's isGrounded:" + theGravityProvider.isGrounded);
