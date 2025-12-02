@@ -25,7 +25,7 @@ public class ShrinkMushroom : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // If the object colliding with the mushroom's hitbox the function is called that makes the mushroom shrink.
-        if (other.CompareTag("Projectile")) ShrinkMe();
+        if (other.CompareTag("Projectile") && other.transform.gameObject.layer == 13) ShrinkMe();
     }
     
     public void ShrinkMe() {
