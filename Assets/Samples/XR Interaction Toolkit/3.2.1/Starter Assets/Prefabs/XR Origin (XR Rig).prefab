@@ -3033,23 +3033,27 @@ MonoBehaviour:
   - I should try to climb my way up to find something useful.
   - 
   textsLab:
-  - I wonder what happened here...?
-  - Wait, this seems important.
+  - I wonder what happened here...? Wait, this seems important.
   - It seems by this report the current state of this forest is a result of experimentation...
   - '"Our initiative towards exploring these quickly regenerating plants," they wrote.'
   - '"Our goal behind our research was to see if this could be passed onto humans."'
-  - '"The plants have taken control of this forest,"'
-  - '", and have made life for people here slightly difficult."'
+  - '"The plants have taken control of this forest, and have made life for people
+    here slightly difficult."'
   - '"It appeared there are roots underground, with healing properties that could
     fight these invasive species,"'
-  - '", that could have been boiled with some chemicals, although we suspect we may
-    have accidentally discarded them."'
+  - '"Some of the specimen may been boiled with some chemicals although we suspect
+    we may have accidentally discarded them."'
+  - '"We''ve kept here a beaker containing remnants of the experiments."'
   - '"We have already spent too much of our annual funding to make it worth our time
     and money salvaging this forest."'
   - '"Moving forward we will be looking for forests with more financial prospects."'
   - How tone-deaf. Science is both a beautiful and terrible thing.
   - Although, maybe we can find the necessary materials in the landfills and underground
     areas they alluded to.
+  - If I combine those healing plants with weakened forms of this infectious specimen,
+    perhaps I can create a cure!
+  - Once I cure this infection, the plants might stop blocking my path and I'll be
+    able to leave.
   - 
   textsWasteland:
   - The air I am breathing is pungent. No wonder this land's inhabitants' lives were
@@ -3060,6 +3064,15 @@ MonoBehaviour:
   - 
   textsFinalCutscene:
   - This is the moment of truth! Let's go.
+  - 
+  textsPostCave:
+  - 'Damn, looks like those plants blocked my way out. '
+  - "If they\u2019re as sturdy as the ones I just saw, I\u2019ll need to find some
+    other way to deal with them. "
+  - 'There must be something in the environment I can use to weaken them. '
+  - 
+  textsGettingTheRoot:
+  - This must be the root we can use to make the cure. Great!
   - 
   durationOfEachMessage: 3
 --- !u!1 &5167925059111895691

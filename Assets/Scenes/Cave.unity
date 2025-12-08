@@ -11221,6 +11221,83 @@ Transform:
   m_Children: []
   m_Father: {fileID: 498104729}
   m_LocalEulerAnglesHint: {x: 51.739, y: 0, z: 0}
+--- !u!1 &1889777381
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1889777385}
+  - component: {fileID: 1889777384}
+  - component: {fileID: 1889777383}
+  - component: {fileID: 1889777382}
+  m_Layer: 0
+  m_Name: Sphere (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1889777382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889777381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5990937f2152e8c43b04a501ead4e1df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textCycler: {fileID: 1683331584}
+  theID: 7
+--- !u!135 &1889777383
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889777381}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.05
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1889777384
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889777381}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1889777385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889777381}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.86, y: 4.174, z: -1.29}
+  m_LocalScale: {x: 13.262885, y: 13.262885, z: 13.262885}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1903630209
 GameObject:
   m_ObjectHideFlags: 0
@@ -12423,110 +12500,6 @@ PrefabInstance:
     - target: {fileID: 4083252680172266230, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_EnableMoveWhileSelecting
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: textsLab.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: textsCave.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsLab.Array.data[0]'
-      value: I wonder what happened here...?
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsLab.Array.data[1]'
-      value: Wait, this seems important.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsLab.Array.data[2]'
-      value: It seems by this book the current state of this forest is a result of
-        experimentation...
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsLab.Array.data[3]'
-      value: Science is both a beautiful and terrible thing.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsLab.Array.data[4]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: textsTutorial.Array.size
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: textsWasteland.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[0]'
-      value: It's been five days since I've fallen in here.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[1]'
-      value: I suppose that reveals how much the other scientists care about me.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[2]'
-      value: Ahh, my leg...! It stings!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[3]'
-      value: Hm....
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[4]'
-      value: Maybe there is something to help this pain.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[5]'
-      value: I'm not familiar with these plants. They must be invasive!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[6]'
-      value: I'm running out of plants and mushrooms to treat my wound, but there's
-        still a day's left supply.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[7]'
-      value: The best bet I have is mixing them all together in this cauldron.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[8]'
-      value: I'm barely hanging on to life, but I'm happy to be alive, thanks to
-        my chemical blaster.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsTutorial.Array.data[9]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsWasteland.Array.data[0]'
-      value: Perfect. Once I extract the solution from this syringe, I'll be one
-        step closer to curing this place.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsWasteland.Array.data[1]'
-      value: I need to go to a higher elevation.
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsWasteland.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: textsFinalCutscene.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsFinalCutscene.Array.data[0]'
-      value: This is the moment of truth!
-      objectReference: {fileID: 0}
-    - target: {fileID: 4312715693941852876, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: 'textsFinalCutscene.Array.data[1]'
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4778211696441940833, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_RayInteractor
@@ -13846,6 +13819,7 @@ SceneRoots:
   - {fileID: 2098456561}
   - {fileID: 348395413}
   - {fileID: 1490530792}
+  - {fileID: 1889777385}
   - {fileID: 56021376}
   - {fileID: 801017584}
   - {fileID: 38828375}
